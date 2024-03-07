@@ -11,7 +11,7 @@ module.exports.index = async (req, res) => {
 };
 
 module.exports.renderNewForm = async (req, res) => {
-  await res.render("E:/KOMAL KAPOOR/DELTA/MajorProject/views/listings/new.ejs");
+  await res.render("./listings/new.ejs");
 };
 
 module.exports.showListing = async (req, res) => {

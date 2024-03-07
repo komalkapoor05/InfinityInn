@@ -24,6 +24,43 @@ body {
   color: #222222 !important;
 }
 
+.search-btn {
+  background-color: #fe424d !important;
+  color: white !important;
+  border-radius: 25px !important;
+  padding: 0 1rem 0 1rem !important;
+  display: flex !important; /* Use flexbox */
+  align-items: center !important;
+}
+.search-btn:hover {
+  background-color: #fe424d !important;
+  color: white !important;
+}
+.search-btn i {
+  display: inline !important;
+  margin-right: 0.5rem !important;
+}
+.search-inp {
+  border-radius: 25px !important;
+  padding: 0.5rem 3rem 0.5rem 3rem !important;
+}
+
+@media screen and (max-width: 600px) {
+  .search-inp {
+    padding: 0.2rem 0.2rem 0.2rem 0.2rem !important;
+    text-align: center !important;
+  }
+}
+
+.newListing {
+  text-align: center;
+}
+
+.logoutBtn {
+  display: flex !important;
+  align-items: center;
+}
+
 /* footer */
 
 .f-info-links a {

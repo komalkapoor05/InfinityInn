@@ -22,6 +22,15 @@
   .tax-info {
     display: none;
   }
+
+  /* .tax-box {
+    position: absolute;
+    width: 100%;
+  } */
+
+  /* min-width 992
+  max-width 1400 */
+
   .tax-toggle {
     border: 1px solid black;
     border-radius: 1rem;
@@ -30,7 +39,23 @@
     margin-left: 9rem;
     display: flex;
     align-items: center;
+    /* position: absolute;
+    top: 0;
+    right: 120px; */
   }
+
+  /* @media only screen and (max-width: 1400px) and (min-width: 992px) {
+    .tax-box { */
+  /* display: flex !important;
+    justify-content: flex-end !important; */
+  /* position: relative;
+    }
+    .tax-toggle {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  } */
 </style>
 
 <div id="filters">
@@ -79,17 +104,19 @@
     <p>Boats</p>
   </div>
 
-  <div class="tax-toggle">
-    <div class="form-check-reverse form-switch">
-      <input
-        class="form-check-input"
-        type="checkbox"
-        role="switch"
-        id="flexSwitchCheckDefault"
-      />
-      <label class="form-check-label" for="flexSwitchCheckDefault"
-        >Display total after taxes</label
-      >
+  <div class="tax-box">
+    <div class="tax-toggle">
+      <div class="form-check-reverse form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch"
+          id="flexSwitchCheckDefault"
+        />
+        <label class="form-check-label" for="flexSwitchCheckDefault"
+          >Display total after taxes</label
+        >
+      </div>
     </div>
   </div>
 </div>

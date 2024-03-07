@@ -1,26 +1,7 @@
-<style>
-  .search-btn {
-    background-color: #fe424d;
-    color: white;
-    border-radius: 25px;
-    padding: 0 1rem 0 1rem;
-  }
-  .search-btn:hover {
-    background-color: #fe424d;
-    color: white;
-  }
-  .search-btn i {
-    display: inline;
-    margin-right: 0.5rem;
-  }
-  .search-inp {
-    border-radius: 25px;
-    padding: 0.5rem 3rem 0.5rem 3rem;
-  }
-</style>
+<style></style>
 
 <nav class="navbar navbar-expand bg-body-light border-bottom sticky-top">
-  <div class="container-fluid">
+  <div class="container-fluid custom-navbar">
     &nbsp;&nbsp;<a class="navbar-brand" href="/listings"
       ><i class="fa-regular fa-compass"></i
     ></a>
@@ -43,23 +24,64 @@
             class="form-control me-2 search-inp"
             type="search"
             placeholder="Search destinations"
+            id="searchInp"
           />
-          <button class="btn search-btn" type="submit">
+          <button class="btn search-btn" id="searchBtn" type="submit">
             <i class="fa-solid fa-magnifying-glass"></i>Search
           </button>
         </form>
       </div>
 
       <div class="navbar-nav ms-auto">
-        <a class="nav-link" href="/listings/new">InfinityInn your home</a>
+        <a class="nav-link newListing" href="/listings/new"
+          >InfinityInn your home</a
+        >
         &nbsp; &nbsp; <% if(!currUser) { %>
         <a class="nav-link" href="/signup"><b>SignUp</b></a>
         <a class="nav-link" href="/login"><b>LogIn</b></a>
 
         <% } %> <% if(currUser) { %>
-        <a class="nav-link" href="/logout"><b>LogOut</b></a>
+        <a class="nav-link logoutBtn" href="/logout"><b>LogOut</b></a>
         <% } %>
       </div>
     </div>
   </div>
 </nav>
+
+<!-- <script>
+  window.addEventListener("resize", function () {
+    var searchBtn = document.getElementById("searchBtn");
+    var searchInp = document.getElementById("searchInp");
+
+    if (window.innerWidth <= 600) {
+      searchBtn.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i>';
+      searchInp.placeholder = "Search";
+    } else {
+      searchBtn.innerHTML =
+        '<i class="fa-solid fa-magnifying-glass"></i> Search';
+      searchInp.placeholder = "Search destinations";
+    }
+  });
+</script> -->
+
+<script>
+  function updateSearchButton() {
+    var searchBtn = document.getElementById("searchBtn");
+    var searchInp = document.getElementById("searchInp");
+
+    if (window.innerWidth <= 600) {
+      searchBtn.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i>';
+      searchInp.placeholder = "Search";
+    } else {
+      searchBtn.innerHTML =
+        '<i class="fa-solid fa-magnifying-glass"></i> Search';
+      searchInp.placeholder = "Search destinations";
+    }
+  }
+
+  // Call the function when the page is loaded
+  window.addEventListener("load", updateSearchButton);
+
+  // Call the function when the window is resized
+  window.addEventListener("resize", updateSearchButton);
+</script>
