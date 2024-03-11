@@ -22,6 +22,9 @@
   .tax-info {
     display: none;
   }
+  .form-check-input:hover {
+    cursor: pointer;
+  }
 
   /* .tax-box {
     position: absolute;
@@ -131,8 +134,15 @@
         <p class="card-text">
           <b><%= listing.title %></b>
           <br />
-          &#x20b9; <%= listing.price.toLocaleString("en-IN") %> / night
-          <i class="tax-info"> &nbsp; &nbsp; + 18% GST</i>
+          <span class="befor-tax"
+            >&#x20b9; <%= listing.price.toLocaleString("en-IN") %> / night</span
+          >
+          <br />
+          <!-- <i class="tax-info"> &nbsp; &nbsp; + 18% GST</i> -->
+          <span class="tax-info" style="text-decoration: underline"
+            >&#8377; <%= (listing.price*1.18).toLocaleString("en-IN") %>
+            &nbsp;after adding taxes (18%)</span
+          >
         </p>
       </div>
     </div>
@@ -144,11 +154,19 @@
   let taxSwitch = document.getElementById("flexSwitchCheckDefault");
   taxSwitch.addEventListener("click", () => {
     let taxInfo = document.getElementsByClassName("tax-info");
+    let beforeTax = document.getElementsByClassName("before-tax");
     for (info of taxInfo) {
       if (info.style.display != "inline") {
         info.style.display = "inline";
       } else {
         info.style.display = "none";
+      }
+    }
+    for (price of beforeTax) {
+      if (price.style.display != "none") {
+        price.style.display = "none";
+      } else {
+        price.style.display = "none";
       }
     }
   });

@@ -23,7 +23,7 @@ module.exports.showListing = async (req, res) => {
     req.flash("error", "Listing that you requested for, does not exist!");
     res.redirect("/listings");
   }
-  res.render("E:/KOMAL KAPOOR/DELTA/MajorProject/views/listings/show.ejs", {
+  res.render("./listings/show.ejs", {
     listing,
   });
 };
@@ -59,7 +59,7 @@ module.exports.renderEditForm = async (req, res) => {
   let originalImgUrl = listing.image.url;
   originalImgUrl = originalImgUrl.replace("/upload", "/upload/w_250");
 
-  res.render("E:/KOMAL KAPOOR/DELTA/MajorProject/views/listings/edit.ejs", {
+  res.render("./listings/edit.ejs", {
     listing,
     originalImgUrl,
   });

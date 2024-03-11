@@ -24,6 +24,14 @@ body {
   color: #222222 !important;
 }
 
+.logo {
+  color: #fe424d !important;
+  font-size: larger !important;
+  font-family: Lucida Handwriting;
+  font-weight: 900 !important;
+  line-height: 2 !important;
+}
+
 .search-btn {
   background-color: #fe424d !important;
   color: white !important;
@@ -54,6 +62,11 @@ body {
 
 .newListing {
   text-align: center;
+}
+
+.newListing:hover {
+  text-shadow: 0 0 0.5px rgba(0, 0, 0, 1); /* Apply a slight shadow to simulate bold */
+  opacity: 1; /* Ensure full opacity */
 }
 
 .logoutBtn {
@@ -139,7 +152,7 @@ body {
 /*show page*/
 
 .show-img {
-  height: 30vh;
+  height: 50vh;
 }
 
 .btns {
@@ -152,5 +165,5 @@ body {
 /* Map */
 #map {
   height: 400px;
-  width: 80vh;
+  width: 100vh;
 }
