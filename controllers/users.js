@@ -41,5 +41,3 @@ module.exports.logout = (req, res, next) => {
     res.redirect("/listings");
   });
 };
-
-//we have implemented a full stack project using mvc framework

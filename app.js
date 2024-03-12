@@ -83,19 +83,13 @@ app.use((req, res, next) => {
   next();
 });
 
-// app.get("/demouser", async (req, res) => {
-//   let fakeUser = new User({
-//     email: "stu@gmail.com",
-//     username: "student",
-//   });
-
-//   let registeredUser = await User.register(fakeUser, "helloworld");
-//   res.send(registeredUser);
-// });
-
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
+
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
 
 app.all("*", (req, res, next) => {
   next(new ExpressError(404, "Page Not Found!"));
@@ -104,11 +98,8 @@ app.all("*", (req, res, next) => {
 app.use((err, req, res, next) => {
   let { statusCode = 500, message = "something went wrong!" } = err;
   res.status(statusCode).render("error.ejs", { err });
-  // res.status(statusCode).send(message);
 });
 
 app.listen(8080, () => {
   console.log("server is listening to port 8080");
 });
-
-// error dekh lio kya aa rha hai

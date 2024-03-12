@@ -69,7 +69,9 @@ body {
   opacity: 1; /* Ensure full opacity */
 }
 
-.logoutBtn {
+.logoutBtn,
+.loginBtn,
+.signupBtn {
   display: flex !important;
   align-items: center;
 }
