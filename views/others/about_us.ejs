@@ -1,0 +1,301 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<style>
+  .imge img {
+    width: 1515px;
+    height: 800px;
+    margin-left: -110px;
+  }
+
+  .box {
+    margin-top: 90px;
+    padding-left: 28%;
+    padding-right: 28%;
+    margin-left: -25px;
+  }
+  .heading {
+    color: #222222;
+    font-size: 30px;
+    margin-bottom: 8px;
+  }
+
+  .para {
+    font: 16px;
+    color: #222222;
+    opacity: 0.9;
+    width: 655px;
+  }
+
+  .fastFacts {
+    margin: 80px -110px 0;
+    padding: 80px 80px 66px;
+    background-color: rgb(242, 242, 242);
+  }
+
+  .fastFacts_container {
+    margin-left: -17px;
+  }
+
+  .h1 {
+    font-size: 32px;
+    margin: 0px 5px 40px;
+    color: #222222;
+  }
+  .fastFacts_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Set grid to have four columns */
+    column-gap: 24px;
+    row-gap: 24px;
+    grid-auto-flow: dense;
+  }
+
+  .fastFact_container {
+    padding: 40px;
+    background-color: white;
+    width: 330px;
+    border-radius: 14px;
+  }
+
+  /* .fastFacts_grid {
+    display: grid;
+    column-gap: 24px;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: 0;
+    grid-column-end: auto;
+    grid-column-start: span 3;
+    grid-auto-flow: dense;
+  }
+  .fastFact_container {
+    margin: 0px 0px 24px;
+    padding: 40px 40px 32px;
+    background-color: white;
+    width: 300px;
+  } */
+  .fastFact_title {
+    font-size: 54px;
+    margin: 0px 0px 8px;
+  }
+  .fastFact_desc {
+    font-size: 17px;
+    margin: 0px 0px 32px;
+  }
+  .fastFact_footnote {
+    font-size: 11px;
+    margin: 24px 0 0;
+  }
+  .founder-section {
+    color: #222222;
+    margin: 80px 0 0;
+  }
+  .founder-img {
+    height: 410px;
+    width: 410px;
+    border-radius: 12px;
+  }
+  .founder-info {
+    margin: 0px 0px 40px;
+  }
+  .founder-name {
+    font-size: 19px;
+    margin-top: 15px;
+  }
+  .founder-position {
+    font-size: 16px;
+    margin-top: -4px;
+    font-weight: 400;
+  }
+  .story-section {
+    margin-top: 120px;
+    margin-bottom: 200px;
+    color: #222222;
+  }
+  .stories {
+    display: flex;
+    justify-content: space-between;
+  }
+  .story {
+    margin: 0px 12px;
+    border: 0.1px rgba(0, 0, 0, 0.288) solid;
+    border-radius: 14px;
+    width: 300px;
+  }
+  .story img {
+    height: 290px;
+    width: 250px;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-top-right-radius: 14px;
+    border-top-left-radius: 14px;
+  }
+  .story div {
+    padding: 14px;
+    margin-bottom: 10px;
+  }
+  .story h3 {
+    font-size: 18px;
+  }
+  .story p {
+    font-size: 14px;
+  }
+</style>
+
+<body>
+  <div class="main">
+    <div class="imge">
+      <img src="/images/about-us.jpg" alt="" />
+    </div>
+    <div class="box">
+      <h1 class="heading">About us</h1>
+      <p class="para">
+        InfinityInn was born in 2023 when two Hosts welcomed three guests to
+        their San Francisco home, and has since grown to over 5 million Hosts
+        who have welcomed over 1.5 billion guest arrivals in almost every
+        country across the globe. Every day, Hosts offer unique stays and
+        experiences that make it possible for guests to connect with communities
+        in a more authentic way.
+      </p>
+    </div>
+    <section class="fastFacts">
+      <div class="fastFacts_container">
+        <h1 class="h1">Fast Facts</h1>
+        <div class="fastFacts_grid">
+          <div class="fastFact_container">
+            <div class="fastFact">
+              <h3 class="fastFact_title">1.1M+</h3>
+              <p class="fastFact_desc">active listings worldwide</p>
+              <p class="fastFact_footnote">as of December 31, 2023</p>
+            </div>
+          </div>
+          <div class="fastFact_container">
+            <div class="fastFact">
+              <h3 class="fastFact_title">30K+</h3>
+              <p class="fastFact_desc">
+                cities and towns with active InfinityInn listings
+              </p>
+              <p class="fastFact_footnote">as of December 31, 2023</p>
+            </div>
+          </div>
+          <div class="fastFact_container">
+            <div class="fastFact">
+              <h3 class="fastFact_title">180+</h3>
+              <p class="fastFact_desc">
+                countries and regions with InfinityInn listings
+              </p>
+              <p class="fastFact_footnote">as of December 31, 2023</p>
+            </div>
+          </div>
+          <div class="fastFact_container">
+            <div class="fastFact">
+              <h3 class="fastFact_title">80M+</h3>
+              <p class="fastFact_desc">InfinityInn guest arrivals all-time</p>
+              <p class="fastFact_footnote">as of December 31, 2023</p>
+            </div>
+          </div>
+          <div class="fastFact_container">
+            <div class="fastFact">
+              <h3 class="fastFact_title">900K+</h3>
+              <p class="fastFact_desc">Hosts on InfinityInn</p>
+              <p class="fastFact_footnote">as of December 31, 2023</p>
+            </div>
+          </div>
+          <div class="fastFact_container">
+            <div class="fastFact">
+              <h3 class="fastFact_title">₹250M+</h3>
+              <p class="fastFact_desc">earned by Hosts, all-time</p>
+              <p class="fastFact_footnote">as of December 31, 2023</p>
+            </div>
+          </div>
+          <div class="fastFact_container">
+            <div class="fastFact">
+              <h3 class="fastFact_title">₹58K</h3>
+              <p class="fastFact_desc">
+                earned by the typical Indian Host in 2023
+              </p>
+              <p class="fastFact_footnote">as of December 31, 2023</p>
+            </div>
+          </div>
+          <div class="fastFact_container">
+            <div class="fastFact">
+              <h3 class="fastFact_title">₹700M</h3>
+              <p class="fastFact_desc">
+                total taxes collected and remitted globally
+              </p>
+              <p class="fastFact_footnote">as of December 31, 2023</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="founder-section">
+      <h1 class="h1">Founder</h1>
+      <div class="founder-info">
+        <img
+          src="/images/founder-img.jpg"
+          alt="founder-image"
+          class="founder-img"
+        />
+        <h2 class="founder-name">Komal Kapoor</h2>
+        <h3 class="founder-position">
+          InfinityInn Founder and Chief Executive Officer
+        </h3>
+      </div>
+    </section>
+    <section class="story-section">
+      <h1 class="h1">The InfinityInn story</h1>
+      <div class="stories">
+        <div class="story">
+          <img
+            src="/images/story-img-1.avif"
+            alt=""
+            height="250px"
+            width="250px"
+          />
+          <div>
+            <h3>March 2022</h3>
+            <p>
+              Ravi and Pippa host InfinityInn Bed and Breakfast's first guests
+            </p>
+          </div>
+        </div>
+        <div class="story">
+          <img src="/images/story-img-2.avif" alt="" />
+          <div>
+            <h3>November 2022</h3>
+            <p>InfinityInn officially launches during SXSW. Two bookings!</p>
+          </div>
+        </div>
+        <div class="story">
+          <img
+            src="/images/story-img-3.avif"
+            alt=""
+            height="250px"
+            width="250px"
+          />
+          <div>
+            <h3>May 2023</h3>
+            <p>
+              The InfinityInn website launches in time for the Democratic
+              National Convention and gets 80 bookings
+            </p>
+          </div>
+        </div>
+        <div class="story">
+          <img
+            src="/images/story-img-4.avif"
+            alt=""
+            height="250px"
+            width="250px"
+          />
+          <div>
+            <h3>May 2023</h3>
+            <p>
+              We launch Payments, our bespoke payments platform which in 2024
+              processed about ₹70 crore in guest and Host transactions in over
+              40 currencies
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>

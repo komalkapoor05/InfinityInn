@@ -5,7 +5,9 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin-left: 8px;
   }
+
   .filter {
     text-align: center;
     margin-right: 2rem;
@@ -59,95 +61,130 @@
       right: 0;
     }
   } */
+
+  .show-more-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+
+  .show-more-container span {
+    font-size: 18px;
+    margin-bottom: 12px;
+    font-weight: 450;
+    color: #222222;
+  }
+
+  .show-more-btn {
+    padding: 11px 22px;
+    color: white;
+    background-color: #222222;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+  .show-more-btn:hover {
+    background-color: black;
+  }
 </style>
 
-<div id="filters">
-  <div class="filter">
-    <div><i class="fa-solid fa-fire"></i></div>
-    <p>Trending</p>
+<div class="index-container">
+  <div id="filters">
+    <div class="filter">
+      <div><i class="fa-solid fa-fire"></i></div>
+      <p>Trending</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-bed"></i></div>
+      <p>Rooms</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-mountain-city"></i></div>
+      <p>Iconic Cities</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-mountain"></i></div>
+      <p>Mountains</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-brands fa-fort-awesome"></i></div>
+      <p>Castles</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-person-swimming"></i></div>
+      <p>Amazing Pools</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-campground"></i></div>
+      <p>Camping</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-cow"></i></div>
+      <p>Farms</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-regular fa-snowflake"></i></div>
+      <p>Arctic</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-igloo"></i></div>
+      <p>Domes</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-ship"></i></div>
+      <p>Boats</p>
+    </div>
+
+    <div class="tax-box">
+      <div class="tax-toggle">
+        <div class="form-check-reverse form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="flexSwitchCheckDefault"
+          />
+          <label class="form-check-label" for="flexSwitchCheckDefault"
+            >Display total after taxes</label
+          >
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="filter">
-    <div><i class="fa-solid fa-bed"></i></div>
-    <p>Rooms</p>
-  </div>
-  <div class="filter">
-    <div><i class="fa-solid fa-mountain-city"></i></div>
-    <p>Iconic Cities</p>
-  </div>
-  <div class="filter">
-    <div><i class="fa-solid fa-mountain"></i></div>
-    <p>Mountains</p>
-  </div>
-  <div class="filter">
-    <div><i class="fa-brands fa-fort-awesome"></i></div>
-    <p>Castles</p>
-  </div>
-  <div class="filter">
-    <div><i class="fa-solid fa-person-swimming"></i></div>
-    <p>Amazing Pools</p>
-  </div>
-  <div class="filter">
-    <div><i class="fa-solid fa-campground"></i></div>
-    <p>Camping</p>
-  </div>
-  <div class="filter">
-    <div><i class="fa-solid fa-cow"></i></div>
-    <p>Farms</p>
-  </div>
-  <div class="filter">
-    <div><i class="fa-regular fa-snowflake"></i></div>
-    <p>Arctic</p>
-  </div>
-  <div class="filter">
-    <div><i class="fa-solid fa-igloo"></i></div>
-    <p>Domes</p>
-  </div>
-  <div class="filter">
-    <div><i class="fa-solid fa-ship"></i></div>
-    <p>Boats</p>
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+    <% for(let listing of allListings) { %>
+    <a href="/listings/<%= listing._id %>" class="listing-link">
+      <div class="card col listing-card">
+        <img src="<%= listing.image.url %>" class="card-img-top" style="height:
+        20rem;" alt= />
+        <div class="card-img-overlay"></div>
+        <div class="card-body">
+          <p class="card-text">
+            <b><%= listing.title %></b>
+            <br />
+            <span class="befor-tax"
+              >&#x20b9; <%= listing.price.toLocaleString("en-IN") %> /
+              night</span
+            >
+            <br />
+            <!-- <i class="tax-info"> &nbsp; &nbsp; + 18% GST</i> -->
+            <span class="tax-info" style="text-decoration: underline"
+              >&#8377; <%= (listing.price*1.18).toLocaleString("en-IN") %>
+              &nbsp;including 18% taxes</span
+            >
+          </p>
+        </div>
+      </div>
+    </a>
+    <% } %>
   </div>
 
-  <div class="tax-box">
-    <div class="tax-toggle">
-      <div class="form-check-reverse form-switch">
-        <input
-          class="form-check-input"
-          type="checkbox"
-          role="switch"
-          id="flexSwitchCheckDefault"
-        />
-        <label class="form-check-label" for="flexSwitchCheckDefault"
-          >Display total after taxes</label
-        >
-      </div>
-    </div>
+  <div class="show-more-container">
+    <span>Continue exploring beach homes</span>
+    <button class="show-more-btn">Show more</button>
   </div>
-</div>
-<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
-  <% for(let listing of allListings) { %>
-  <a href="/listings/<%= listing._id %>" class="listing-link">
-    <div class="card col listing-card">
-      <img src="<%= listing.image.url %>" class="card-img-top" style="height:
-      20rem;" alt= />
-      <div class="card-img-overlay"></div>
-      <div class="card-body">
-        <p class="card-text">
-          <b><%= listing.title %></b>
-          <br />
-          <span class="befor-tax"
-            >&#x20b9; <%= listing.price.toLocaleString("en-IN") %> / night</span
-          >
-          <br />
-          <!-- <i class="tax-info"> &nbsp; &nbsp; + 18% GST</i> -->
-          <span class="tax-info" style="text-decoration: underline"
-            >&#8377; <%= (listing.price*1.18).toLocaleString("en-IN") %>
-            &nbsp;after adding taxes (18%)</span
-          >
-        </p>
-      </div>
-    </div>
-  </a>
-  <% } %>
 </div>
 
 <script>

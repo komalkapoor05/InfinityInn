@@ -1,15 +1,368 @@
+<style>
+  .main-ftr {
+    background-color: #f7f7f7;
+    padding: 48px 80px;
+    padding-bottom: 0;
+  }
+  .panel-one h2 {
+    font-size: 24px;
+    color: #222222;
+    margin-bottom: 8px;
+  }
+  .tab {
+    margin: 6px 6px 6px 0;
+    padding: 10px;
+    color: #717171;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .tab:focus {
+    border-bottom: 2px solid #222222;
+    color: #222222;
+  }
+  .tab-one {
+    margin: 6px 6px 6px -10px;
+  }
+  .panel-two {
+    font-size: 15px;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 48px;
+  }
+  .content {
+    display: grid;
+    row-gap: 24px;
+    grid-template-columns: 225px 225px 225px 225px 225px 225px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .content li {
+    box-sizing: border-box;
+    color: rgb(34, 34, 34);
+    display: list-item;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+      "Helvetica Neue", sans-serif;
+    height: 36px;
+    line-break: strict;
+    line-height: 20.02px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    text-align: left !important;
+    text-size-adjust: 100%;
+    width: 259.862px;
+    list-style-position: outside;
+  }
+  .content-a {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    text-decoration: none;
+    line-height: 18px;
+    text-align: left;
+    line-break: strict;
+  }
+  .dark {
+    color: #222222f0;
+    text-wrap: nowrap;
+    font-weight: 550;
+    opacity: 0.99;
+  }
+  .light {
+    color: #717171;
+    font-weight: 400;
+  }
+
+  .panel-three {
+    display: grid;
+    grid-template-columns: 420px 420px 420px;
+    column-gap: 40px;
+  }
+  .panel-three section {
+    padding: 48px 0;
+    border-top-color: rgb(34, 34, 34);
+  }
+  .panel-three h3 {
+    font-size: 17px;
+    color: #222222;
+  }
+  .panel-three ul {
+    display: grid;
+    padding: 0;
+    margin: 0;
+    line-height: 30px;
+  }
+  .panel-three li {
+    list-style: none;
+  }
+  .panel-three a {
+    text-decoration: none;
+    color: #222222;
+    font-size: 15px;
+    opacity: 0.98;
+  }
+  .panel-three a:hover {
+    text-decoration: underline;
+  }
+  .panel-four {
+    padding: 10px 0 24px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .panel-four ol,
+  .panel-four li {
+    display: inline-block;
+    list-style: disc;
+    margin: 0;
+    padding: 0;
+  }
+  .panel-four a {
+    text-decoration: none;
+    color: #222222;
+    opacity: 0.98;
+    font-size: 15px;
+  }
+  .panel-four div {
+    margin: -4px;
+    padding: 4px;
+  }
+  .panel-left a:hover {
+    text-decoration: underline;
+  }
+  .panel-right {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    color: black;
+  }
+  .panel-right span {
+    margin-right: 15px;
+  }
+  .panel-right span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .panel-right a {
+    margin-left: 10px;
+  }
+  .social-links i {
+    font-size: 20px;
+  }
+</style>
+
 <footer>
-  <div class="f-info">
-    <div class="f-info-socials mb-1">
-      <i class="fa-brands fa-square-facebook"></i>
-      <i class="fa-brands fa-square-instagram"></i>
-      <i class="fa-brands fa-linkedin"></i>
+  <div class="main-ftr">
+    <div class="pannel-one"><h2>Inspiration for future getaways</h2></div>
+    <div class="tablist">
+      <button class="tab tab-one">Popular</button>
+      <button class="tab">Arts & Culture</button>
+      <button class="tab">Outdoors</button>
+      <button class="tab">Mountains</button>
+      <button class="tab">Unique stays</button>
+      <button class="tab">Categories</button>
+      <button class="tab">Things to do</button>
     </div>
-    <div class="f-info-brand">&copy;InfinityInn Private Limited</div>
-    <div class="f-info-links">
-      <a href="/privacy">Privacy</a>
-      &nbsp;&nbsp;
-      <a href="/terms">Terms</a>
+    <div class="panel-two">
+      <ul class="content" id="content1">
+        <li>
+          <a class="content-a" href="" onclick="return false">
+            <span class="dark">Canmore</span>
+            <span class="light">Apartment rentals</span>
+          </a>
+        </li>
+        <li>
+          <a class="content-a" href="" onclick="return false">
+            <span class="dark">Benalmádena</span>
+            <span class="light">House rentals</span>
+          </a>
+        </li>
+        <li>
+          <a class="content-a" href="" onclick="return false">
+            <span class="dark">Marbella</span>
+            <span class="light">Beachfront rentals</span>
+          </a>
+        </li>
+        <li>
+          <a class="content-a" href="" onclick="return false">
+            <span class="dark">Mijas</span>
+            <span class="light">Flat rentals</span>
+          </a>
+        </li>
+        <li>
+          <a class="content-a" href="" onclick="return false">
+            <span class="dark">Prescott</span>
+            <span class="light">House rentals</span>
+          </a>
+        </li>
+        <li>
+          <a class="content-a" href="" onclick="return false">
+            <span class="dark">Scottsdale</span>
+            <span class="light">Mansion rentals</span>
+          </a>
+        </li>
+        <li>
+          <a class="content-a" href="" onclick="return false">
+            <span class="dark">Tucson</span>
+            <span class="light">Mansion rentals</span>
+          </a>
+        </li>
+        <li>
+          <a class="content-a" href="" onclick="return false">
+            <span class="dark">Jasper</span>
+            <span class="light">Holiday rentals</span>
+          </a>
+        </li>
+        <li>
+          <a class="content-a" href="" onclick="return false">
+            <span class="dark">Mountain View</span>
+            <span class="light">House rentals</span>
+          </a>
+        </li>
+        <li>
+          <a class="content-a" href="" onclick="return false">
+            <span class="dark">Devonport</span>
+            <span class="light">Cottage rentals</span>
+          </a>
+        </li>
+        <li>
+          <a class="content-a" href="" onclick="return false">
+            <span class="dark">Mallacoota</span>
+            <span class="light">Pet-friendly rentals</span>
+          </a>
+        </li>
+        <li>
+          <a class="content-a" href="" onclick="return false">
+            <span class="dark">Ibiza</span>
+            <span class="light">Holiday rentals</span>
+          </a>
+        </li>
+        <li>
+          <a class="content-a" href="" onclick="return false">
+            <span class="dark">Anaheim</span>
+            <span class="light">Beach house rentals</span>
+          </a>
+        </li>
+        <li>
+          <a class="content-a" href="" onclick="return false">
+            <span class="dark">Monterey</span>
+            <span class="light">Bungalow rentals </span>
+          </a>
+        </li>
+        <li>
+          <a class="content-a" href="" onclick="return false">
+            <span class="dark">Paso Robles </span>
+            <span class="light">Holiday rentals</span>
+          </a>
+        </li>
+        <li>
+          <a class="content-a" href="" onclick="return false">
+            <span class="dark">Santa Barbara </span>
+            <span class="light">Apartment rentals</span>
+          </a>
+        </li>
+        <li>
+          <a class="content-a" href="" onclick="return false">
+            <span class="dark">Sonoma</span>
+            <span class="light">Beach house rentals</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <hr />
+    <div class="panel-three">
+      <section>
+        <h3>Support</h3>
+        <ul>
+          <li><a href="" onclick="return false">Help Centre</a></li>
+          <li><a href="" onclick="return false">AirCover</a></li>
+          <li><a href="" onclick="return false">Anti-discrimination</a></li>
+          <li><a href="" onclick="return false">Disability Support</a></li>
+          <li><a href="" onclick="return false">Cancellation Options</a></li>
+          <li>
+            <a href="" onclick="return false">Report Neighbourhood Concern</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>Hosting</h3>
+        <ul>
+          <li><a href="" onclick="return false">InfinityInn Your Home</a></li>
+          <li><a href="" onclick="return false">AirCover for Hosts</a></li>
+          <li><a href="" onclick="return false">Hosting Resources</a></li>
+          <li><a href="" onclick="return false">Community Forum</a></li>
+          <li><a href="" onclick="return false">Hosting Responsibily</a></li>
+          <li>
+            <a href="" onclick="return false">Join a free Hosting Class</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>InfinityInn</h3>
+        <ul>
+          <li><a href="" onclick="return false">Newsroom</a></li>
+          <li><a href="" onclick="return false">New features</a></li>
+          <li><a href="" onclick="return false">Careers</a></li>
+          <li><a href="" onclick="return false">Investors</a></li>
+          <li>
+            <a href="" onclick="return false"
+              >InfinityInn.org Emergency Stays</a
+            >
+          </li>
+          <li><a href="" onclick="return false">Contact Us</a></li>
+        </ul>
+      </section>
+    </div>
+    <hr />
+    <div class="panel-four">
+      <div class="panel-left">
+        <ol>
+          <li>
+            <a href="" onclick="return false">© 2024 InfinityInn, Inc.</a
+            ><span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+          </li>
+          <li>
+            <a href="" onclick="return false">Privacy</a
+            ><span> &nbsp;&nbsp;·&nbsp;&nbsp; </span>
+          </li>
+          <li>
+            <a href="" onclick="return false">Terms</a
+            ><span> &nbsp;&nbsp;·&nbsp;&nbsp;</span>
+          </li>
+          <li>
+            <a href="" onclick="return false">Sitemap</a
+            ><span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+          </li>
+          <li><a href="/about-us">About Us</a></li>
+        </ol>
+      </div>
+      <div class="panel-right">
+        <div>
+          <i class="fa-solid fa-globe"></i>
+          &nbsp;
+          <span>English(IN)</span>
+          <span>₹ INR</span>
+        </div>
+        <div class="social-links">
+          <a href="#" onclick="return false"
+            ><i class="fa-brands fa-square-facebook"></i
+          ></a>
+          <a href="#" onclick="return false"
+            ><i class="fa-brands fa-square-twitter"></i
+          ></a>
+          <a href="#" onclick="return false"
+            ><i class="fa-brands fa-square-instagram"></i
+          ></a>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
+
+<!-- color opacity vhgera abhi check krna hai
+
+nbbb
+ -->
